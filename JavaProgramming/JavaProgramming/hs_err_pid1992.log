@@ -1,0 +1,206 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 67108864 bytes for Failed to commit area from 0x00000000c1400000 to 0x00000000c5400000 of length 67108864.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3273), pid=1992, tid=7196
+#
+# JRE version:  (11.0.12+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.12+8-LTS-237, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\lib\idea_rt.jar=65106:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\bin -Dfile.encoding=UTF-8 day09_IfStatements.NameOfDay
+
+Host: Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz, 4 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+Time: Sun Sep 25 16:51:45 2022 Türkiye Standart Saati elapsed time: 0.049099 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000011db9d64000):  JavaThread "Unknown thread" [_thread_in_vm, id=7196, stack(0x0000001b33f00000,0x0000001b34000000)]
+
+Stack: [0x0000001b33f00000,0x0000001b34000000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x617d9a]
+V  [jvm.dll+0x74eeef]
+V  [jvm.dll+0x750599]
+V  [jvm.dll+0x750c23]
+V  [jvm.dll+0x2438d8]
+V  [jvm.dll+0x61518a]
+V  [jvm.dll+0x609f45]
+V  [jvm.dll+0x2f85cc]
+V  [jvm.dll+0x2f8452]
+V  [jvm.dll+0x2fd106]
+V  [jvm.dll+0x33f6ef]
+V  [jvm.dll+0x33f120]
+V  [jvm.dll+0x2d5ca8]
+V  [jvm.dll+0x2d6e06]
+V  [jvm.dll+0x72a977]
+V  [jvm.dll+0x72c21f]
+V  [jvm.dll+0x34c469]
+V  [jvm.dll+0x710400]
+V  [jvm.dll+0x3b5baf]
+V  [jvm.dll+0x3b7cb1]
+C  [jli.dll+0x520b]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000011db7b6d460, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000011db9d7a000 GCTaskThread "GC Thread#0" [stack: 0x0000001b34000000,0x0000001b34100000] [id=7360]
+  0x0000011db9d93800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000001b34100000,0x0000001b34200000] [id=7364]
+  0x0000011db9d94800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000001b34200000,0x0000001b34300000] [id=7236]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb99c14f37]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000011db9d615d0] Heap_lock - owner thread: 0x0000011db9d64000
+
+Heap address: 0x00000000c1400000, size: 1004 MB, Compressed Oops mode: Non-zero based: 0x00000000c1400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6e0480000 - 0x00007ff6e048f000 	C:\Program Files\Java\jdk-11.0.12\bin\java.exe
+0x00007ffbc7790000 - 0x00007ffbc7988000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffbc7520000 - 0x00007ffbc75dd000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffbc5410000 - 0x00007ffbc56de000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffbc5180000 - 0x00007ffbc5280000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffbc0280000 - 0x00007ffbc0298000 	C:\Program Files\Java\jdk-11.0.12\bin\jli.dll
+0x00007ffbbe6c0000 - 0x00007ffbbe6d5000 	C:\Program Files\Java\jdk-11.0.12\bin\VCRUNTIME140.dll
+0x00007ffbc6790000 - 0x00007ffbc683e000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffbc7240000 - 0x00007ffbc72de000 	C:\Windows\System32\msvcrt.dll
+0x00007ffbc7190000 - 0x00007ffbc722c000 	C:\Windows\System32\sechost.dll
+0x00007ffbc5c00000 - 0x00007ffbc5d25000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffbc6840000 - 0x00007ffbc69e0000 	C:\Windows\System32\USER32.dll
+0x00007ffbc5280000 - 0x00007ffbc52a2000 	C:\Windows\System32\win32u.dll
+0x00007ffbb5e40000 - 0x00007ffbb60da000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffbc7390000 - 0x00007ffbc73ba000 	C:\Windows\System32\GDI32.dll
+0x00007ffbc56e0000 - 0x00007ffbc57eb000 	C:\Windows\System32\gdi32full.dll
+0x00007ffbc5340000 - 0x00007ffbc53dd000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffbc4c00000 - 0x00007ffbc4c0a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffbc73c0000 - 0x00007ffbc73f0000 	C:\Windows\System32\IMM32.DLL
+0x00007ffbc4c10000 - 0x00007ffbc4c46000 	C:\Windows\system32\DriverStore\FileRepository\nvsmi.inf_amd64_d948da72bde46eee\nvinitx.dll
+0x00007ffbc5d30000 - 0x00007ffbc6474000 	C:\Windows\System32\Shell32.dll
+0x00007ffbc2f60000 - 0x00007ffbc36f4000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x00007ffbc58a0000 - 0x00007ffbc5bf4000 	C:\Windows\System32\combase.dll
+0x00007ffbc47f0000 - 0x00007ffbc4820000 	C:\Windows\SYSTEM32\Wldp.dll
+0x00007ffbc57f0000 - 0x00007ffbc589d000 	C:\Windows\System32\SHCORE.dll
+0x00007ffbc6600000 - 0x00007ffbc6655000 	C:\Windows\System32\shlwapi.dll
+0x00000000552b0000 - 0x00000000552b6000 	C:\Program Files\NVIDIA Corporation\CoProcManager\_etoured.dll
+0x00007ffbbd380000 - 0x00007ffbbd3c3000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x00007ffbc6b60000 - 0x00007ffbc6fcf000 	C:\Windows\System32\SETUPAPI.dll
+0x00007ffbc4f60000 - 0x00007ffbc4fae000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ffbc53e0000 - 0x00007ffbc5407000 	C:\Windows\System32\bcrypt.dll
+0x00007ffbbd3d0000 - 0x00007ffbbd3fd000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x00007ffba3940000 - 0x00007ffba39db000 	C:\Program Files\Java\jdk-11.0.12\bin\msvcp140.dll
+0x00007ffb99930000 - 0x00007ffb9a42f000 	C:\Program Files\Java\jdk-11.0.12\bin\server\jvm.dll
+0x00007ffbc7230000 - 0x00007ffbc7238000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffbc0a50000 - 0x00007ffbc0a59000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffbbb880000 - 0x00007ffbbb8a7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffbc75e0000 - 0x00007ffbc764b000 	C:\Windows\System32\WS2_32.dll
+0x00007ffbc2d60000 - 0x00007ffbc2d72000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffbc0270000 - 0x00007ffbc0280000 	C:\Program Files\Java\jdk-11.0.12\bin\verify.dll
+0x00007ffbb26b0000 - 0x00007ffbb2894000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffbb2610000 - 0x00007ffbb263c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x0000011db7c30000 - 0x0000011db7cb2000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffbbe5c0000 - 0x00007ffbbe5e8000 	C:\Program Files\Java\jdk-11.0.12\bin\java.dll
+0x00007ffbbe6b0000 - 0x00007ffbbe6ba000 	C:\Program Files\Java\jdk-11.0.12\bin\jimage.dll
+0x00007ffbbe610000 - 0x00007ffbbe61e000 	C:\Program Files\Java\jdk-11.0.12\bin\instrument.dll
+0x00007ffbbdaa0000 - 0x00007ffbbdab6000 	C:\Program Files\Java\jdk-11.0.12\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11.0.12\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Windows\system32\DriverStore\FileRepository\nvsmi.inf_amd64_d948da72bde46eee;C:\Program Files\NVIDIA Corporation\CoProcManager;C:\Program Files\Java\jdk-11.0.12\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\lib\idea_rt.jar=65106:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\bin -Dfile.encoding=UTF-8 
+java_command: day09_IfStatements.NameOfDay
+java_class_path (initial): C:\Kullanýcýlar\SAMSUNG\IdeaProjects\JavaProgramming\JavaProgramming\out\production\JavaProgramming
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 67108864                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1052770304                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\QT Lite\QTSystem;C:\Users\SAMSUNG\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\bin;
+USERNAME=SAMSUNG
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7 microcode 0x2f, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 4009M (206M free)
+TotalPageFile size 4009M (AvailPageFile size 61M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 52M, peak: 116M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.12+8-LTS-237) for windows-amd64 JRE (11.0.12+8-LTS-237), built on Jun  8 2021 11:25:59 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
